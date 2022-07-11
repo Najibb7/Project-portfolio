@@ -1,0 +1,106 @@
+.contactContent {
+    background: $color-purple-pale;
+    border-radius: $borderRadius;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 45%;
+    grid-template-areas:
+        "1"
+        "2"
+        "3";
+
+    .header {
+        grid-area: 1;
+        width: 100%;
+        position: relative;
+        background: $color-purple-pale;
+        height: 340px;
+    }
+
+    .contactBox {
+        transform: translateY(145%);
+        grid-area: 2;
+        background: $color-purple;
+        margin: 0 auto;
+        padding: 1rem 3rem;
+        z-index: 2;
+        border-radius: $borderRadius;
+        box-shadow: 0 3px 10px #333;
+        width: 50%;
+        min-width: 440px;
+        min-height: 200px;
+
+        h1 {
+            text-align: center;
+            margin-top: 0.3rem;
+            position: relative;
+            color: $color-red;
+
+            &:after {
+                content: '';
+                height: 1px;
+                width: 50%;
+                background: $color-purple-pale;
+                position: absolute;
+                bottom: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        ul {
+            height: 72%;
+            width: inherit;
+            display: grid;
+            margin-top: 2.5rem;
+
+            li {
+                position: relative;
+                margin: .4rem;
+            }
+
+            // i {
+            //     font-size: 1.4rem;
+            //     position: absolute;
+            //     transform: translateY(2px);
+            //     color: $color-purple-pale;
+            // }
+
+            span {
+                font-size: 1.4rem;
+                position: absolute;
+                transform: translateX(20px);
+                background: transparent;
+                border: none;
+                outline: none;
+                width: 350px;
+                transition: .2s ease;
+            }
+
+            .clickInput:hover {
+                transform: translateX(56px);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contactContent {
+        margin-top: 3rem;
+        .contactBox {
+            min-width: 100% !important;
+            transform: translateY(30%) !important;
+        }
+
+        span {
+            font-size: .9rem !important;
+        }
+
+        h4 {
+            font-size: .9rem;
+        }
+    }
+}
