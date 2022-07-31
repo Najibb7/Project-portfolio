@@ -5,15 +5,15 @@ class Languages extends Component {
 state = {
     languages: [
         { id: 1, value: 'JavaScript', xp: 0.6 },
-        { id: 2, value: 'Php', xp: 1 },
-        { id: 3, value: 'HTML/CSS', xp: 1 },
-        { id: 4, value: 'SQL', xp: 1 },
+        { id: 2, value: 'Php', xp: 0.7 },
+        { id: 3, value: 'HTML/CSS', xp: 0.5 },
+        { id: 4, value: 'SQL', xp: 0.8 },
     ],
     frameworks: [
-        { id: 1, value: 'React', xp: 1 },
-        { id: 2, value: 'Laravel', xp: 1 },
-        { id: 3, value: 'Sass', xp: 1 },
-        { id: 4, value: 'NodeJS/Express', xp: 1 },
+        { id: 1, value: 'React', xp: 0.6 },
+        { id: 2, value: 'Laravel', xp: 0.4 },
+        { id: 3, value: 'Sass', xp: 0.3 },
+        { id: 4, value: 'NodeJS/Express', xp: 0.7 },
     ]
 }
 
